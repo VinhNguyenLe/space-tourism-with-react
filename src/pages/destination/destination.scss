@@ -1,0 +1,222 @@
+.destination {
+    background-image: url("../../assets/destination/background-destination-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-inline: 11vw;
+
+    & p {
+        max-width: 450px;
+        min-height: fit-content;
+        width: max-content;
+        font-size: 18px;
+        line-height: 2;
+        padding-bottom: 30px;
+    }
+}
+
+.title {
+    padding-top: 180px;
+    padding-bottom: 40px;
+    color: var(--white);
+    animation: downIn 1s ease;
+
+    & span {
+        color: var(--lightHalf);
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .destination {
+        background-image: url("../../assets/destination/background-destination-tablet.jpg");
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .destination {
+        background-image: url("../../assets/destination/background-destination-mobile.jpg");
+    }
+}
+
+.destination__wrap {
+    height: 100%;
+    position: relative;
+    animation: opct 2.6s ease;
+}
+
+.destination__item {
+    height: 100%;
+    display: none;
+    grid-template-columns: 1fr 1fr;
+
+    &.active {
+        display: grid;
+    }
+}
+
+.destination__left {
+    display: flex;
+    justify-content: center;
+}
+
+.destination__img {
+    animation: upTo 1s ease, rotateAround 40s linear infinite;
+}
+
+.destination__right {
+    width: max-content;
+    padding-top: 60px;
+    padding-left: 60px;
+    animation: upTo 1s ease;
+}
+
+.destination__right-bottom {
+    display: flex;
+    border-top: 1px solid rgba($color: #fff, $alpha: 0.3);
+    padding-top: 30px;
+
+    & h5 {
+        font-size: 14px;
+        font-weight: 200;
+        color: var(--light);
+        margin-bottom: 12px;
+    }
+}
+
+.destination__distance {
+    margin-right: 80px;
+}
+
+.destination__pag {
+    position: absolute;
+    color: var(--light);
+    font-family: var(--barlow-condensed-font);
+    text-transform: uppercase;
+    font-size: 16px;
+    top: 0;
+    left: calc(50% + 60px);
+    // transform: translateX(50%);
+    display: flex;
+}
+
+.destination__pag-item {
+    margin-right: 30px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        width: 0;
+        height: 3px;
+        background-color: var(--light);
+        transition: var(--t4);
+    }
+
+    &:hover {
+        color: var(--white);
+
+        &::after {
+            width: 100%;
+            left: 0;
+            background-color: var(--white);
+        }
+    }
+}
+
+.destination__pag-item.active {
+    color: var(--white);
+    &::after {
+        width: 100%;
+        left: 0;
+        background-color: var(--white);
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .title {
+        padding-top: 100px;
+        text-align: center;
+    }
+    .destination__img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .destination__item {
+        grid-template-columns: 1fr;
+    }
+
+    .destination__left {
+        width: 78vw;
+    }
+
+    .destination__right {
+        padding: 0;
+        padding-top: 30px;
+        text-align: center;
+        width: 100%;
+
+        & h2 {
+            font-size: 56px;
+            margin-top: 80px;
+        }
+
+        & p {
+            width: 100%;
+            line-height: 1.6;
+            margin: 0 auto;
+        }
+    }
+
+    .destination__right-bottom {
+        flex-direction: column;
+
+        & h4 {
+            font-size: 28px;
+        }
+    }
+
+    .destination__distance,
+    .destination__travel {
+        margin-right: unset;
+        margin-bottom: 38px;
+    }
+
+    .destination__pag {
+        left: 50%;
+        top: 350px;
+        transform: translateX(-50%);
+    }
+
+    .destination__pag-item {
+        margin-inline: 12px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 820px) {
+    .title {
+        padding-top: 160px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .destination__img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .destination__img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .destination__pag {
+        top: 220px;
+    }
+}

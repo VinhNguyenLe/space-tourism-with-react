@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600&family=Barlow:wght@300;400;500&family=Bellefair&display=swap");
+
+:root {
+    //font
+    --bellfair-font: "Bellefair", serif;
+    --barlow-condensed-font: "Barlow Condensed", sans-serif;
+    --barlow-font: "Barlow", sans-serif;
+    //color
+    --dark: rgb(10, 12, 23);
+    --light: rgb(209, 215, 250);
+    --lightHalf: rgba(209, 215, 250, 0.5);
+    --white: rgb(255, 255, 255);
+    //transition
+    --t4: all 0.4s ease;
+    --t3: all 0.3s ease;
+    --t7: all 0.7s ease;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+body {
+    font-family: var(--barlow-font);
+    font-weight: 400;
+    background-color: var(--dark);
+    cursor: default;
+}
+
+.container {
+    // max-width: 1440px;
+    width: 100%;
+    min-height: 100vh;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--bellfair-font);
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+h1 {
+    font-size: 150px;
+}
+
+h2 {
+    font-size: 100px;
+}
+
+h3 {
+    font-size: 56px;
+}
+h4 {
+    font-size: 32px;
+}
+
+h5 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--light);
+    font-family: var(--barlow-condensed-font);
+}
+
+nav {
+    font-size: 16px;
+    font-family: var(--barlow-condensed-font);
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+p {
+    color: var(--light);
+}
+
+a {
+    color: inherit;
+}
+
+.subheading1 {
+    font-family: var(--bellfair-font);
+    text-transform: uppercase;
+}
+
+.subheading2 {
+    font-family: var(--barlow-condensed-font);
+    font-size: 14px;
+    letter-spacing: 1.3px;
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 80px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    p {
+        font-size: 15px;
+    }
+}
+
+@keyframes downIn {
+    from {
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes upTo1 {
+    0% {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes leftIn1 {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+
+    33% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes leftIn2 {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes rightIn2 {
+    0% {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes leftIn3 {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    70% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes opct {
+    0% {
+        opacity: 0;
+        transform: translateY(500px);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(500px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotateAround {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
